@@ -1,0 +1,18 @@
+body{
+    padding-left: 6em;
+    font-family: "Helvetica Neue", Helvetica, sansSerif, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: large;
+    background-color: lightgreen;
+
+}
+
+body span:hover{
+    display: inline-block;
+    background-color:yellow;
+    color: gray;
+    text-decoration:none;
+    padding: 5px 3px;
+    font-family: "Helvetica Neue", Helvetica Neue, sans-serif;
+}
