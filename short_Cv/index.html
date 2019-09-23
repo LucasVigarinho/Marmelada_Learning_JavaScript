@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<!-- That tag specifies the language code english. -->
+<html lang="en">
+<!-- defining initials instructions to be use as metadata -->
+<head>
+    <!-- Define the character set used. -->
+    <meta charset="utf-8">
+    <!-- Define a title for my HTML document. -->
+    <title>short CV Lucas</title>
+    <!-- Load the style sheet file. -->
+    <link id="pageStyle" href="css/reset.css" rel="stylesheet" type="text/css">
+    <!-- Meta element is used to specify which character set is used, page description, keywords, author,
+    and other metadata. -->
+    <!-- define a description of the web page -->
+    <meta name="description" content="short CV Lucas, is a preparation for the course, Web Application - TUDublin - Diana Carvalho e Ferreira">
+    <!-- defining keywords to the search engines SEO-->
+    <meta name="keywords" content="Lucas Maximo Marques Vigarinho resumme or CV or Curriculum Vitae, short version">
+    <!-- define the author of a page -->
+    <meta name="author" content="Lucas Maximo">
+    <meta name="twitter:site" content=@cvlucas>
+    <meta name="Language" content="ENG-US">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript">
+    function swapStyle(sheet) {
+        document.getElementById("pageStyle").setAttribute('href', sheet);
+
+    }
+</script>
+
+</head>
+<!-- defining body of the web site-->
+<body onload = "start()">
+
+    <!-- Create a main wrapper in order to facilitate the organization through the css style sheets-->
+    <div class="main-wrapper" >
+    <!-- Initializing all the javascript functions -->
+    <script type="text/javascript">
+        function start(){
+            display_Current_Time();
+            startTimer();
+        }
+
+    </script>
+
+    <!-- Creating button in order to solve questions
+    - 3. Change the webpage in ways to select the style (external CSS) by clicking a button.
+    - 2. Create two external style sheets: “Creative” and “Professional”, with a background, different text formatting, etc.
+		Define style sheet Creative
+		Define style sheet Professional-->
+    <button onclick="swapStyle('css/Creative.css')"> Creative </button>
+    <button onclick="swapStyle('css/Professional.css');"> Professional </button>
+
+    <!-- The <header> element represents a container for introductory content or a set of navigational links. -->
+    <header>
+        <!-- Script in javascript in order to put back the main image from Lucas on his CV  periodically-->
+        <script type = "text/javascript">
+            function displayImage() {
+                document.getElementById("myImage").src = "images/Lucas_Cv_photo.jpeg";
+            }
+            function startTimer() {
+                setInterval(displayImage, 6000);
+            }
+        </script>
+        
+        <!-- Create the main figure in order to solve the question - f. your photo at the top of the page-->
+        <figure class="cvMainPhoto" >
+            <!-- The <img> tag defines an image in an HTML page. This tag requires two attributes: src and alt.
+            In reality images are not inserted into to HTML page but images are linked to HTML.-->
+            <img alt="Lucas_Maximo_DIT" height="304"  id="myImage" src="images/Lucas_Cv_photo.jpeg" width="228"><br><br>
+
+            <!-- 5. Add an interactive image gallery with photos of yourself.
+            At the top of the page there should be a large image.
+            Under the image there should be a ribbon of small images (thumbnails).
+            When the user clicks one of the thumbnails, the large image at the top should change to the full-size version of the clicked thumbnail.-->
+
+            <button height="50"  id="thumbnail1" onclick="document.getElementById('myImage').src='images/Lucas_1.jpeg'"  style="border: white" width="50">
+                <img height="60" src="images/Lucas_1.jpeg" />
+            </button>
+            <button height="50"  id="thumbnail2" onclick="document.getElementById('myImage').src='images/Lucas_2.jpeg'" style="border: white" width="50">
+                <img height="60" src="images/Lucas_2.jpeg" />
+            </button>
+            <button height="50"  id="thumbnail3" onclick="document.getElementById('myImage').src='images/Lucas_3.jpeg'" style="border: white" width="50">
+                <img height="60" src="images/Lucas_3.jpeg" />
+            </button>
+            <h1 class="pl-3"><strong><em>Lucas maximo</em></strong></h1>
+        </figure>
+
+
+        <!-- the <nav> tag defines a set of navigation links.
+            b. links to 3 websites (past schools, employers) -->
+        <nav class="menu">
+            <ul class="menu-experience">
+                <li><a href=' https://www.totvs.com'>Last experience (Totvs)</a></li>
+                <li><a href=' https://www.griffith.ie/'>Last college (Griffith)</a></li>
+                <li><a href=' http://www.dit.ie/'>Actual university (Tud)</a></li>
+            </ul>
+
+            <!-- the <address> tag defines the contact information for the author/owner of a document or an article. -->
+            <address class="menu-address" >
+                <a class="menu-phone" href="tel:+353838742563">+353 (083) 874-2563</a>
+                <a class="menu-email" href="mailto:info@millflowers.ie">info@millflowers.ie</a>
+            </address>
+        </nav>
+    </header>
+    <hr>
+    <article>
+        <!-- figure is used to mark up a photo in a document
+            g. the TU Dublin logo, working as a hyperlink to www.dit.ie-->
+        <figure class="dit-logo" >
+            <!-- The <img> tag defines an image in an HTML page. This tag requires two attributes: src and alt.
+            In reality images are not inserted into to HTML page but images are linked to HTML.-->
+            <a href=' http://www.dit.ie/'></a><img alt="Technological University Dublin" height="130" src="images/TUDublin_logo.jpeg"  >
+        </figure>
+
+        <!-- 7. Make the web page display the current time (hours:minutes:seconds) every 3 seconds, under the TU Dublin logo. -->
+        <script type="text/javascript">
+            function display_current(){
+                var refresh = 3000;
+                mytime = setTimeout('display_Current_Time()', refresh);
+            }
+            function display_Current_Time() {
+                var x = new Date();
+                // var x1=x.getMonth() + 1+ "/" + x.getDate() + "/" + x.getFullYear();
+                // x2 = x1 + " - " +  x.getHours( )+ ":" +  x.getMinutes() + ":" +  x.getSeconds();
+                document.getElementById('time').innerHTML = x;
+                display_current();
+        }
+        </script>
+
+        <!-- 8. Hovering the mouse over the timer will make its background be assigned a random colour -->
+        <!-- Watch span -->
+        <span id='time'> Current Time - 3 seconds</span>
+
+        <!-- c. several paragraphs of text (summary, cover letter) -->
+        <!-- Summary description -->
+        <h2 class="artisan border-top"><b>Summary</b></h2>
+
+        <p align="justify " class="summary">Bilingual professional (Portuguese and English) holding a Higher Diploma in Computing in Science,
+            BSc in Business Management, and MSc in Marketing, over 10 years of experience in ERP/SaaS/PaaS/IaaS
+            account management, customer relationship, and business management.
+            Looking for opportunities as a Software Engineer,  seeking IT improvement with a focus on career progression.</p>
+        <!-- Cover letter description-->
+        <h2 class="artisan border-top"><b>Cover Letter</b></h2>
+        <p align="justify"  class="cover letter"  >
+            To whom it May concern<br><br>
+            Upon review of your job posting for the Associate Software Engineer,
+            I felt compelled to submit my resume for your consideration. As an experienced and tech-savvy professional with comprehensive {experience} and expertise in developing and implementing a variety of technical solutions to achieve goals, I have also a developed knowledge of new tools, languages and APIs, I am therefore confident that I would significantly contribute to the objectives of your company.<br><br>
+            With a proven track record of analysing business processes, leading project management responsibilities and constantly developing software skills, I believe I am in a position to greatly exceed expectations for this role and substantially benefit your organization. <br> <br>I would be delighted to hear from you and look forward to discussing the position in further detail.
+            <br><br><br>Thank you for your time and consideration.<br><br><br>
+            Sincerely,<br><br>
+            Lucas Maximo
+        </p>
+        <hr>
+        <!-- The <nav> tag defines a set of navigation links. -->
+        <h2 class="experience border-top"><b>Career Experience</b></h2>
+        <p><b>GRIFFITH COLLEGE</b> <br>(Academic Projects)</p>
+        <nav>
+            <ul >
+                <li ><a> <b>Design Patterns </b> <p align="justify">Technologies used: Java, Eclipse |Methodology used: Researched Methodology | Description: Creational Patterns, Structural Patterns, Behavioral Patterns, Patterns identified by Sun Java Centre (Stack, Naive Queue, Circular Queue, Sorting, Selection, Bubble, Big O, Trees, Quick Sort, Interact, Recursion and Graph.</p> </a></li>
+                <li><a> <b>Car Rental</b><p align="justify"> Relational Database | Technologies used: MySQL,  Java & Eclipse| Methodology Used: Research | Description: Normalization, Schema, Data Population, Queries and connection with front end system JavaFx. </p></a></li>
+                <li><a><b>English Schools</b> <p align="justify"> Web design | Technologies Used: Html, Css,  PHP & MySQL| Methodology used: Research | Description: Design documentation(Market analyses, Content inventory, Sitemap, Organization of webpages, Wireframe), Website Code, including images, Videos and Database.</p></a></li>
+                <li><a><b>Object Oriented</b> <p align="justify"> Technologies Used: MySQL, Java & IntelliJ | Methodology used: Research Methodology | Description: Electronics Shop, UML Diagram, Databases creation, IO File Handling, Abstracts and interfaces, Immutable Objects, Comparable, Polymorphism, Singleton, Generics, Multithreading, etc.</p></a></li>
+            </ul>
+        </nav>
+    </article>
+    <article >
+        <table bgcolor="aqua"   border = "2" cellpadding="10" cellspacing="10">
+            <tr bgcolor="white">
+                <th>Course</th>
+                <th>Institute</th>
+                <th>Years</th>
+                <th>Grades</th>
+            </tr>
+            <tr bgcolor="white">
+                <td>Master in Advanced Software Development</td>
+                <td>Dublin Institute of Technology</td>
+                <td>2019 - 2021</td>
+                <td>indefinite</td>
+            </tr>
+            <tr bgcolor="white">
+                <td>Higher Diploma in Science in Computing</td>
+                <td>Griffith College Dublin</td>
+                <td>2018 – 2019</td>
+                <td>First Honours</td>
+            </tr>
+            <tr bgcolor="white">
+                <td>International Business Programme Erasmus - Marketing</td>
+                <td>EADA Business School, Spain </td>
+                <td>2017</td>
+                <td>First Honours</td>
+            </tr>
+            <tr bgcolor="white">
+                <td>Master in Marketing (Innovations)</td>
+                <td>ESPM (School of Advertising and Marketing), Brazil </td>
+                <td>2016 - 2017</td>
+                <td>90+</td>
+            </tr>
+            <tr bgcolor="white">
+                <td>Bachelor in Business Administration </td>
+                <td>FECAP (Alvarez Penteado Foundation), Brazil </td>
+                <td>2003 - 2007</td>
+                <td>90+</td>
+            </tr>
+        </table>
+    </article>
+
+
+    <!-- Is the footer of the entire site-->
+    <!-- Twitter Card??-->
+    <footer class="twitter"></footer>
+</div>
+</body>
+
+
+</html>
