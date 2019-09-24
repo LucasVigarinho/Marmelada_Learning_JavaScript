@@ -21,12 +21,8 @@
     <meta name="Language" content="ENG-US">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<script type="text/javascript">
-    function swapStyle(sheet) {
-        document.getElementById("pageStyle").setAttribute('href', sheet);
-
-    }
-</script>
+    <!--Creating the link connection between html file and javascript file -->
+    <script src="JavaScript/script.js"></script>
 
 </head>
 <!-- defining body of the web site-->
@@ -34,14 +30,7 @@
 
     <!-- Create a main wrapper in order to facilitate the organization through the css style sheets-->
     <div class="main-wrapper" >
-    <!-- Initializing all the javascript functions -->
-    <script type="text/javascript">
-        function start(){
-            display_Current_Time();
-            startTimer();
-        }
 
-    </script>
 
     <!-- Creating button in order to solve questions
     - 3. Change the webpage in ways to select the style (external CSS) by clicking a button.
@@ -53,15 +42,7 @@
 
     <!-- The <header> element represents a container for introductory content or a set of navigational links. -->
     <header>
-        <!-- Script in javascript in order to put back the main image from Lucas on his CV  periodically-->
-        <script type = "text/javascript">
-            function displayImage() {
-                document.getElementById("myImage").src = "images/Lucas_Cv_photo.jpeg";
-            }
-            function startTimer() {
-                setInterval(displayImage, 6000);
-            }
-        </script>
+
         
         <!-- Create the main figure in order to solve the question - f. your photo at the top of the page-->
         <figure class="cvMainPhoto" >
@@ -103,7 +84,7 @@
             </address>
         </nav>
     </header>
-    <hr>
+    <hr/>
     <article>
         <!-- figure is used to mark up a photo in a document
             g. the TU Dublin logo, working as a hyperlink to www.dit.ie-->
@@ -112,21 +93,6 @@
             In reality images are not inserted into to HTML page but images are linked to HTML.-->
             <a href=' http://www.dit.ie/'></a><img alt="Technological University Dublin" height="130" src="images/TUDublin_logo.jpeg"  >
         </figure>
-
-        <!-- 7. Make the web page display the current time (hours:minutes:seconds) every 3 seconds, under the TU Dublin logo. -->
-        <script type="text/javascript">
-            function display_current(){
-                var refresh = 3000;
-                mytime = setTimeout('display_Current_Time()', refresh);
-            }
-            function display_Current_Time() {
-                var x = new Date();
-                // var x1=x.getMonth() + 1+ "/" + x.getDate() + "/" + x.getFullYear();
-                // x2 = x1 + " - " +  x.getHours( )+ ":" +  x.getMinutes() + ":" +  x.getSeconds();
-                document.getElementById('time').innerHTML = x;
-                display_current();
-        }
-        </script>
 
         <!-- 8. Hovering the mouse over the timer will make its background be assigned a random colour -->
         <!-- Watch span -->
@@ -151,7 +117,7 @@
             Sincerely,<br><br>
             Lucas Maximo
         </p>
-        <hr>
+        <hr/>
         <!-- The <nav> tag defines a set of navigation links. -->
         <h2 class="experience border-top"><b>Career Experience</b></h2>
         <p><b>GRIFFITH COLLEGE</b> <br>(Academic Projects)</p>
