@@ -21,20 +21,27 @@
     <meta name="twitter:site" content=@cvlucas>
     <meta name="Language" content="ENG-US">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link id="pageStyleGame" href="css/gameStyle.css" rel="stylesheet" type="text/css">
+
+    <!-- Creating the link connection between html file and javascript file -->
+    <script src="JavaScript/script.js"></script>
 </head>
 
 <!-- defining body of the web site-->
 <body>
 
-
-
-<!--Develop an interactive webpage for a children’s colour learning game. The game consists in having a grid with multiple colours and a panel where a colour name will be presented; the child will click a cell in the grid and that cell’s colour name will be presented in a panel above.-->
+<!--Develop an interactive web page for a children’s colour learning game. The game consists in having a grid with multiple colours and a panel where a colour name will be presented; the child will click a cell in the grid and that cell’s colour name will be presented in a panel above.-->
 
 <!--Once a cell has been clicked, it will become black. When all cells are black, the game is over. The child will want to click all the cells in the shortest amount of time.-->
 
 <!--1. When the user enters the page, it will present a “Start” button.-->
 <!--2. When the user clicks “Start”:-->
+<button id="start" onclick="genDivs(6, 'css/gameStyle.css')">Start</button>
+
 <!--a. A grid of 6x6 cells is created-->
+
 <!--i. The grid should be generated dynamically, using JavaScript/jQuery. Do not place it statically in the HTML (upfront).-->
 <!--b. Each cell is assigned a random colour, between blue, red, green, orange, purple and gray.-->
 <!--c. A timer will start showing the elapsed time-->

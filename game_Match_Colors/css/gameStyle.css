@@ -1,0 +1,23 @@
+#start{
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 300px;
+    width: 100px;
+    height: 50px;
+}
+.row{
+    margin-left: 50px;
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10% 10% 10%;
+    background-color: white;
+    padding: 0px;
+}
+
+.gridsquare {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    padding: 2px;
+    font-size: 80px;
+    text-align: center;
+    text-decoration-color: transparent;
+}
